@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/app.css';
-import {Row, Col, Button, Icon, ProgressBar} from 'react-materialize'
+import {Row, Col, Button, Icon, ProgressBar , Toast} from 'react-materialize'
 import {config} from '../config.js'
 
 class SinglePage extends React.Component{
@@ -61,7 +61,7 @@ class SinglePage extends React.Component{
     return (
       <div className="content">
         <div className="title"><h1>Chaban App</h1></div>
-        {this.state.isLoading && <ProgressBar/>}
+        {this.state.isLoading ? <ProgressBar/> : <div>
         <Row>
           <Button node="a"  className="button-home" href="/" waves='light'>Liste des événements<Icon left>home</Icon></Button>
         </Row>
@@ -76,7 +76,7 @@ class SinglePage extends React.Component{
         <Row className="nav" id={id}>
             { prevButton }
             { nextButton }
-        </Row>
+        </Row> </div> }
       </div>
     );
   }
