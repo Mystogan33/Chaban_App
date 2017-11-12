@@ -16,10 +16,19 @@ body{
   text-align: center;
   background-color: #26a69a;
   color: white;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.content {
+  border-radius: 10px 10px 0px 0px;
 }
 
 .progress {
     margin: -15px 0 1rem 0;
+}
+
+.champ {
+  text-align: center;
 }
 
 .categories {
@@ -36,8 +45,8 @@ body{
 }
 
 .button-home {
-  float: right;
-  margin-right: 10px;
+  float: left;
+  margin-left: 10px;
 }
 
 .previous-button {
@@ -59,6 +68,15 @@ h1{
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 15px;
+}
+
+.collection .collection-item {
+    background-color: #fff;
+    line-height: 1.5rem;
+    padding: 10px 0px 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: -webkit-center;
 }
 
 .input-field {

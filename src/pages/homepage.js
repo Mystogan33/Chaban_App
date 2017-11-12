@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import '../styles/app.css';
 import Search from '../components/search';
 import List from '../components/list';
-import {ProgressBar} from 'react-materialize'
-import {config} from '../config.js'
-import moment from 'moment'
+import {ProgressBar} from 'react-materialize';
+import {config} from '../config.js';
+import moment from 'moment';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 class HomePage extends Component {
 
@@ -34,13 +36,13 @@ class HomePage extends Component {
     .then(this.handleErrors)
     .then(res => res.json())
     .then(res => {
-
       this.setState({ mylist: res, myCurrentList: res});
       localStorage.setItem('results_max' , res.length);
-
     })
     .catch(function(error) {
+      toast.error("Oh ! 🙁 Il semble qu'un soucis se soit produit");
         console.log(error);
+
     });
   }
 
